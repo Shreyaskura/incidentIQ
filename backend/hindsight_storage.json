@@ -1,0 +1,1500 @@
+{
+  "banks": {
+    "incidentiq": {
+      "bank_id": "incidentiq",
+      "name": "IncidentIQ Production Incident Memory",
+      "mission": "Remember production incidents, error patterns, root causes, successful and failed resolutions, deployment changes, affected services, and operational lessons. Prioritize information that can help diagnose future incidents.",
+      "disposition": {
+        "skepticism": 3,
+        "literalism": 3,
+        "empathy": 3
+      },
+      "background": "",
+      "updated_at": "2026-09-28T15:52:36.693842+00:00"
+    }
+  },
+  "memories": {
+    "incidentiq": [
+      {
+        "id": "mem-1790568342206-0",
+        "text": "Incident #184: Aurora Postgres Pool Exhaustion. Increased database connection pool from 50 to 100.",
+        "type": "experience",
+        "context": null,
+        "document_id": "incident-inc-184",
+        "metadata": null,
+        "tags": null,
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:05:42.206773+00:00",
+        "occurred_start": "2026-09-28T04:05:42.206773+00:00",
+        "occurred_end": "2026-09-28T04:05:42.206773+00:00",
+        "scores": {
+          "relevance": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568424887-0",
+        "text": "Incident #184: Aurora Postgres Pool Exhaustion. Increased database connection pool from 50 to 100.",
+        "type": "experience",
+        "context": null,
+        "document_id": "incident-inc-184",
+        "metadata": null,
+        "tags": null,
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:07:04.887645+00:00",
+        "occurred_start": "2026-09-28T04:07:04.887645+00:00",
+        "occurred_end": "2026-09-28T04:07:04.887645+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568469266-0",
+        "text": "Incident #184: Aurora Postgres Pool Exhaustion. Increased database connection pool from 50 to 100.",
+        "type": "experience",
+        "context": null,
+        "document_id": "incident-inc-184",
+        "metadata": null,
+        "tags": null,
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:07:49.266884+00:00",
+        "occurred_start": "2026-09-28T04:07:49.266884+00:00",
+        "occurred_end": "2026-09-28T04:07:49.266884+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568576099-0",
+        "text": "Incident ID: INC-184\nTitle: Database connection pool exhaustion\nAffected Service: aurora-postgres-primary\nSeverity: P1\nTimestamp: 2026-09-24T09:08:00Z\nError Logs: FATAL: remaining connection slots are reserved for non-replication superuser connections (SQLSTATE 53300). Active pool count: 100/100.\nRoot Cause: Database connection pool saturated at 50 to 100 connections. Unclosed database cursor handles in transaction retry block caused connection leakage under traffic spikes.\nResolution: Increased database connection pool from 50 to 100 via RDS Parameter Group; patched unclosed connection handle in commit 8f29d1c and deployed connection reaper.\nResolution Succeeded: Yes\nDeployment Info: Release v2.13.4\nLead Responder: Sarah Kim (DBA Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-184",
+        "metadata": {
+          "incident_id": "INC-184",
+          "service": "aurora-postgres-primary",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "aurora-postgres-primary",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:36.099878+00:00",
+        "occurred_start": "2026-09-28T04:09:36.099878+00:00",
+        "occurred_end": "2026-09-28T04:09:36.099878+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590781-0",
+        "text": "Incident ID: INC-184\nTitle: Database connection pool exhaustion\nAffected Service: aurora-postgres-primary\nSeverity: P1\nTimestamp: 2026-09-24T09:08:00Z\nError Logs: FATAL: remaining connection slots are reserved for non-replication superuser connections (SQLSTATE 53300). Active pool count: 100/100.\nRoot Cause: Database connection pool saturated at 50 to 100 connections. Unclosed database cursor handles in transaction retry block caused connection leakage under traffic spikes.\nResolution: Increased database connection pool from 50 to 100 via RDS Parameter Group; patched unclosed connection handle in commit 8f29d1c and deployed connection reaper.\nResolution Succeeded: Yes\nDeployment Info: Release v2.13.4\nLead Responder: Sarah Kim (DBA Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-184",
+        "metadata": {
+          "incident_id": "INC-184",
+          "service": "aurora-postgres-primary",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "aurora-postgres-primary",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.781233+00:00",
+        "occurred_start": "2026-09-28T04:09:50.781233+00:00",
+        "occurred_end": "2026-09-28T04:09:50.781233+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590795-0",
+        "text": "Incident ID: INC-178\nTitle: API 500 errors on ingress gateway\nAffected Service: api-gateway-us-east\nSeverity: P1\nTimestamp: 2026-09-21T13:50:00Z\nError Logs: 502 Bad Gateway / upstream connect error or disconnect/reset before headers. reset reason: connection failure, transport failure reason: delayed_connect_error: 111\nRoot Cause: Envoy ingress keepalive timeout was set to 60s while upstream microservices had keepalive timeout set to 60s, triggering race condition connection resets.\nResolution: Increased gateway upstream keepalive timeout from 60s to 75s and executed rolling restart of Envoy router pods.\nResolution Succeeded: Yes\nDeployment Info: Traefik to Envoy gateway migration v3.1\nLead Responder: Elena Rostova (Infra SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-178",
+        "metadata": {
+          "incident_id": "INC-178",
+          "service": "api-gateway-us-east",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "api-gateway-us-east",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.795506+00:00",
+        "occurred_start": "2026-09-28T04:09:50.795506+00:00",
+        "occurred_end": "2026-09-28T04:09:50.795506+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590806-0",
+        "text": "Incident ID: INC-172\nTitle: Redis memory exhaustion and cache eviction storm\nAffected Service: cache-redis-cluster\nSeverity: P2\nTimestamp: 2026-09-17T05:50:00Z\nError Logs: OOM command not allowed when used memory > 'maxmemory' (16GB). Key eviction rate spiked to 14,000 keys/sec; cache hit ratio dropped from 94% to 38%.\nRoot Cause: Session tokens stored without TTL expiring policy during marketing push filled 16GB RAM limit, causing eviction storm that thrashed backend DB.\nResolution: Applied volatile-lru eviction policy, bumped cluster memory to 32GB, and enforced mandatory 24h TTL on all session keys.\nResolution Succeeded: Yes\nDeployment Info: Promotional campaign launch v2.12\nLead Responder: Alex Chen (Lead SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-172",
+        "metadata": {
+          "incident_id": "INC-172",
+          "service": "cache-redis-cluster",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "cache-redis-cluster",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.806934+00:00",
+        "occurred_start": "2026-09-28T04:09:50.806934+00:00",
+        "occurred_end": "2026-09-28T04:09:50.806934+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590818-0",
+        "text": "Incident ID: INC-165\nTitle: Authentication service timeout and JWT validation failure\nAffected Service: auth0-session-broker\nSeverity: P2\nTimestamp: 2026-09-12T10:45:00Z\nError Logs: JWKSFetchTimeout: Operation timed out after 5000ms connecting to https://auth.company.com/.well-known/jwks.json. HTTP 504 on /auth/verify.\nRoot Cause: In-memory JWKS public key cache had a TTL of 60 seconds with no background refresher, causing thundering herd external requests on cache expiration.\nResolution: Increased JWKS cache TTL to 24 hours, added stale-while-revalidate background refresh worker, and cached backup signing keys in Redis.\nResolution Succeeded: Yes\nDeployment Info: Auth broker hotfix v1.9.4\nLead Responder: Devin Thorne (Security Core)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-165",
+        "metadata": {
+          "incident_id": "INC-165",
+          "service": "auth0-session-broker",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "auth0-session-broker",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.818872+00:00",
+        "occurred_start": "2026-09-28T04:09:50.818872+00:00",
+        "occurred_end": "2026-09-28T04:09:50.818872+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590835-0",
+        "text": "Incident ID: INC-159\nTitle: Payment service timeout on checkout settlement\nAffected Service: checkout-payment-svc\nSeverity: P1\nTimestamp: 2026-09-08T18:05:00Z\nError Logs: StripeClient::ApiConnectionError: Request timed out after 30000ms. Celery worker concurrency pool exhausted (32/32 threads active).\nRoot Cause: Synchronous Stripe webhook confirmation blocked Celery worker threads during upstream provider partial outage; no circuit breaker was configured.\nResolution: Implemented Resilience4j circuit breaker with 5s timeout, switched to asynchronous batch queue processing, and scaled worker replicas from 4 to 12.\nResolution Succeeded: Yes\nDeployment Info: Payment gateway v4.0.2\nLead Responder: Elena Rostova (Payments Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-159",
+        "metadata": {
+          "incident_id": "INC-159",
+          "service": "checkout-payment-svc",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "checkout-payment-svc",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.835746+00:00",
+        "occurred_start": "2026-09-28T04:09:50.835746+00:00",
+        "occurred_end": "2026-09-28T04:09:50.835746+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590867-0",
+        "text": "Incident ID: INC-152\nTitle: High API latency and thread pool starvation\nAffected Service: customer-profile-api\nSeverity: P2\nTimestamp: 2026-09-02T15:25:00Z\nError Logs: p99 latency degraded from 45ms to 4800ms. Tomcat thread pool active threads: 200/200. HTTP 503 Service Unavailable under load.\nRoot Cause: Nested synchronous gRPC call to legacy billing service without connection deadline propagation caused all worker threads to block indefinitely.\nResolution: Added 800ms gRPC deadline propagation, enabled non-blocking reactive webclient, and isolated billing lookups behind dedicated thread pool.\nResolution Succeeded: Yes\nDeployment Info: Profile v2.8.1\nLead Responder: Marcus Ray (Core Infra)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-152",
+        "metadata": {
+          "incident_id": "INC-152",
+          "service": "customer-profile-api",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "customer-profile-api",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.867821+00:00",
+        "occurred_start": "2026-09-28T04:09:50.867821+00:00",
+        "occurred_end": "2026-09-28T04:09:50.867821+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590878-0",
+        "text": "Incident ID: INC-146\nTitle: Failed deployment with database migration schema lock\nAffected Service: billing-invoice-service\nSeverity: P1\nTimestamp: 2026-08-28T22:00:00Z\nError Logs: ActiveRecord::LockWaitTimeout: Lock wait timeout exceeded; try restarting transaction. ALTER TABLE invoices ADD COLUMN status varchar DEFAULT 'pending'.\nRoot Cause: Alembic DDL migration attempted to add a non-nullable column with default value on a table with 28M records without concurrent algorithm, locking writes.\nResolution: Aborted and rolled back migration, deployed fix that added column as nullable first, backfilled asynchronously, and applied NOT NULL constraint without locking.\nResolution Succeeded: Yes\nDeployment Info: Helm release release-billing-v2.14.0\nLead Responder: Sarah Kim (Database Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-146",
+        "metadata": {
+          "incident_id": "INC-146",
+          "service": "billing-invoice-service",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "billing-invoice-service",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.878332+00:00",
+        "occurred_start": "2026-09-28T04:09:50.878332+00:00",
+        "occurred_end": "2026-09-28T04:09:50.878332+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590889-0",
+        "text": "Incident ID: INC-139\nTitle: PostgreSQL connection failure on read replicas\nAffected Service: aurora-postgres-primary\nSeverity: P1\nTimestamp: 2026-08-20T07:45:00Z\nError Logs: psycopg2.OperationalError: could not connect to server: Connection refused. Is the server running on host aurora-ro-replica-1.cluster.internal and accepting TCP/IP connections?\nRoot Cause: Engine upgrade on AWS RDS Aurora read replica crashed due to corrupted temporary tablespace disk volume, failing DNS failover switch.\nResolution: Re-pointed database reader endpoint to replica-2, purged corrupted tablespace volume, and enabled AWS RDS Multi-AZ automated failover proxy.\nResolution Succeeded: Yes\nDeployment Info: Aurora PostgreSQL 15.4 minor engine patch\nLead Responder: Marcus Ray (Database Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-139",
+        "metadata": {
+          "incident_id": "INC-139",
+          "service": "aurora-postgres-primary",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "aurora-postgres-primary",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.889009+00:00",
+        "occurred_start": "2026-09-28T04:09:50.889009+00:00",
+        "occurred_end": "2026-09-28T04:09:50.889009+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590898-0",
+        "text": "Incident ID: INC-131\nTitle: Memory leak in Node.js event listener on SSE stream\nAffected Service: notification-stream-svc\nSeverity: P2\nTimestamp: 2026-08-14T01:30:00Z\nError Logs: FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory. Node.js process restarted every 45 minutes.\nRoot Cause: Long-lived Server-Sent Events (SSE) connections did not remove socket 'data' and 'close' event listeners on client disconnect, leaking 1.8MB per closed socket.\nResolution: Fixed event listener cleanup on 'close' signal, wrapped emitter in WeakMap reference, and adjusted V8 max_old_space_size from 2048 to 4096MB.\nResolution Succeeded: Yes\nDeployment Info: Real-time notification engine v1.4\nLead Responder: Alex Chen (Lead SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-131",
+        "metadata": {
+          "incident_id": "INC-131",
+          "service": "notification-stream-svc",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "notification-stream-svc",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.898850+00:00",
+        "occurred_start": "2026-09-28T04:09:50.898850+00:00",
+        "occurred_end": "2026-09-28T04:09:50.898850+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568590908-0",
+        "text": "Incident ID: INC-125\nTitle: Service crash due to unhandled SIGTERM in worker container\nAffected Service: async-worker-pool\nSeverity: P1\nTimestamp: 2026-08-08T11:40:00Z\nError Logs: Kubernetes PodEviction: OOMKilled and ungraceful exit code 137. In-flight Kafka message batch dropped without offset commit acknowledgment.\nRoot Cause: Worker process ignored Kubernetes preStop lifecycle hook and SIGTERM signal, instantly terminating container while holding in-flight uncommitted Kafka transactions.\nResolution: Implemented graceful shutdown signal handler with 30s grace period to flush Kafka consumer offsets before exit; updated Kubernetes terminationGracePeriodSeconds to 60s.\nResolution Succeeded: Yes\nDeployment Info: Kubernetes manifest update cluster-prod\nLead Responder: Elena Rostova (DevOps Core)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-125",
+        "metadata": {
+          "incident_id": "INC-125",
+          "service": "async-worker-pool",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "async-worker-pool",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:09:50.908431+00:00",
+        "occurred_start": "2026-09-28T04:09:50.908431+00:00",
+        "occurred_end": "2026-09-28T04:09:50.908431+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568613947-0",
+        "text": "Incident ID: INC-TEST-99\nTitle: Kafka consumer offset commit timeout test\nAffected Service: kafka-event-stream\nSeverity: P2\nTimestamp: 2026-09-28T04:10:13.627927+00:00\nError Logs: CommitFailedException: The request timed out while waiting for group coordinator\nRoot Cause: Heartbeat interval exceeded max.poll.interval.ms under large message batches\nResolution: Increased max.poll.interval.ms from 300s to 600s and reduced max.poll.records to 250\nResolution Succeeded: Yes\nDeployment Info: Kafka consumer v2.1.0\nLead Responder: Alex Chen\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-test-99",
+        "metadata": {
+          "incident_id": "INC-TEST-99",
+          "service": "kafka-event-stream",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "kafka-event-stream",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:10:13.947266+00:00",
+        "occurred_start": "2026-09-28T04:10:13.947266+00:00",
+        "occurred_end": "2026-09-28T04:10:13.947266+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568613985-0",
+        "text": "Incident ID: INC-205\nTitle: Stripe webhook retry surge test\nAffected Service: checkout-payment-svc\nSeverity: P2\nTimestamp: 2026-09-28T04:10:13.977655+00:00\nError Logs: DuplicateNotificationError: message already acknowledged\nRoot Cause: Webhook idempotent token validation missing on settlement endpoint\nResolution: Added Redis SETNX idempotency lock for 120 seconds\nResolution Succeeded: Yes\nDeployment Info: Hotfix v4.0.3\nLead Responder: Alex Chen (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-205",
+        "metadata": {
+          "incident_id": "INC-205",
+          "service": "checkout-payment-svc",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "checkout-payment-svc",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:10:13.985194+00:00",
+        "occurred_start": "2026-09-28T04:10:13.985194+00:00",
+        "occurred_end": "2026-09-28T04:10:13.985194+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568636478-0",
+        "text": "Incident ID: INC-TEST-99\nTitle: Kafka consumer offset commit timeout test\nAffected Service: kafka-event-stream\nSeverity: P2\nTimestamp: 2026-09-28T04:10:36.192770+00:00\nError Logs: CommitFailedException: The request timed out while waiting for group coordinator\nRoot Cause: Heartbeat interval exceeded max.poll.interval.ms under large message batches\nResolution: Increased max.poll.interval.ms from 300s to 600s and reduced max.poll.records to 250\nResolution Succeeded: Yes\nDeployment Info: Kafka consumer v2.1.0\nLead Responder: Alex Chen\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-test-99",
+        "metadata": {
+          "incident_id": "INC-TEST-99",
+          "service": "kafka-event-stream",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "kafka-event-stream",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:10:36.478184+00:00",
+        "occurred_start": "2026-09-28T04:10:36.478184+00:00",
+        "occurred_end": "2026-09-28T04:10:36.478184+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568636508-0",
+        "text": "Incident ID: INC-205\nTitle: Stripe webhook retry surge test\nAffected Service: checkout-payment-svc\nSeverity: P2\nTimestamp: 2026-09-28T04:10:36.501968+00:00\nError Logs: DuplicateNotificationError: message already acknowledged\nRoot Cause: Webhook idempotent token validation missing on settlement endpoint\nResolution: Added Redis SETNX idempotency lock for 120 seconds\nResolution Succeeded: Yes\nDeployment Info: Hotfix v4.0.3\nLead Responder: Alex Chen (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-205",
+        "metadata": {
+          "incident_id": "INC-205",
+          "service": "checkout-payment-svc",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "checkout-payment-svc",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:10:36.508220+00:00",
+        "occurred_start": "2026-09-28T04:10:36.508220+00:00",
+        "occurred_end": "2026-09-28T04:10:36.508220+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568978856-0",
+        "text": "Incident ID: INC-TEST-99\nTitle: Kafka consumer offset commit timeout test\nAffected Service: kafka-event-stream\nSeverity: P2\nTimestamp: 2026-09-28T04:16:18.563925+00:00\nError Logs: CommitFailedException: The request timed out while waiting for group coordinator\nRoot Cause: Heartbeat interval exceeded max.poll.interval.ms under large message batches\nResolution: Increased max.poll.interval.ms from 300s to 600s and reduced max.poll.records to 250\nResolution Succeeded: Yes\nDeployment Info: Kafka consumer v2.1.0\nLead Responder: Alex Chen\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-test-99",
+        "metadata": {
+          "incident_id": "INC-TEST-99",
+          "service": "kafka-event-stream",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "kafka-event-stream",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:16:18.856176+00:00",
+        "occurred_start": "2026-09-28T04:16:18.856176+00:00",
+        "occurred_end": "2026-09-28T04:16:18.856176+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790568978884-0",
+        "text": "Incident ID: INC-205\nTitle: Stripe webhook retry surge test\nAffected Service: checkout-payment-svc\nSeverity: P2\nTimestamp: 2026-09-28T04:16:18.879447+00:00\nError Logs: DuplicateNotificationError: message already acknowledged\nRoot Cause: Webhook idempotent token validation missing on settlement endpoint\nResolution: Added Redis SETNX idempotency lock for 120 seconds\nResolution Succeeded: Yes\nDeployment Info: Hotfix v4.0.3\nLead Responder: Alex Chen (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-205",
+        "metadata": {
+          "incident_id": "INC-205",
+          "service": "checkout-payment-svc",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "checkout-payment-svc",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:16:18.884365+00:00",
+        "occurred_start": "2026-09-28T04:16:18.884365+00:00",
+        "occurred_end": "2026-09-28T04:16:18.884365+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790570827200-0",
+        "text": "Incident ID: INC-207\nTitle: Search Index Freeze via ElasticsearchSegmentMergingDeadlock\nAffected Service: catalog-search-indexing\nSeverity: P1\nTimestamp: 2026-09-28T04:47:05.160167+00:00\nError Logs: LuceneLockObtainFailedException: ElasticsearchSegmentMergingDeadlock during force_merge API call\nRoot Cause: Concurrent index optimize triggered ElasticsearchSegmentMergingDeadlock on 3 master shards simultaneously.\nResolution: Disabled auto force_merge during peak traffic, increased max_thread_count to 4, and deleted lock file.\nResolution Succeeded: Yes\nDeployment Info: Standard release pipeline\nLead Responder: Search Infrastructure Team\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-207",
+        "metadata": {
+          "incident_id": "INC-207",
+          "service": "catalog-search-indexing",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "catalog-search-indexing",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:47:07.200850+00:00",
+        "occurred_start": "2026-09-28T04:47:07.200850+00:00",
+        "occurred_end": "2026-09-28T04:47:07.200850+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790570919432-0",
+        "text": "Incident ID: INC-207\nTitle: Search Index Freeze via ElasticsearchSegmentMergingDeadlock\nAffected Service: catalog-search-indexing\nSeverity: P1\nTimestamp: 2026-09-28T04:48:37.375883+00:00\nError Logs: LuceneLockObtainFailedException: ElasticsearchSegmentMergingDeadlock during force_merge API call\nRoot Cause: Concurrent index optimize triggered ElasticsearchSegmentMergingDeadlock on 3 master shards simultaneously.\nResolution: Disabled auto force_merge during peak traffic, increased max_thread_count to 4, and deleted lock file.\nResolution Succeeded: Yes\nDeployment Info: Standard release pipeline\nLead Responder: Search Infrastructure Team\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-207",
+        "metadata": {
+          "incident_id": "INC-207",
+          "service": "catalog-search-indexing",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "catalog-search-indexing",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:48:39.432497+00:00",
+        "occurred_start": "2026-09-28T04:48:39.432497+00:00",
+        "occurred_end": "2026-09-28T04:48:39.432497+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790570939588-0",
+        "text": "Incident ID: INC-TEST-99\nTitle: Kafka consumer offset commit timeout test\nAffected Service: kafka-event-stream\nSeverity: P2\nTimestamp: 2026-09-28T04:48:59.289861+00:00\nError Logs: CommitFailedException: The request timed out while waiting for group coordinator\nRoot Cause: Heartbeat interval exceeded max.poll.interval.ms under large message batches\nResolution: Increased max.poll.interval.ms from 300s to 600s and reduced max.poll.records to 250\nResolution Succeeded: Yes\nDeployment Info: Kafka consumer v2.1.0\nLead Responder: Alex Chen\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-test-99",
+        "metadata": {
+          "incident_id": "INC-TEST-99",
+          "service": "kafka-event-stream",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "kafka-event-stream",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:48:59.588665+00:00",
+        "occurred_start": "2026-09-28T04:48:59.588665+00:00",
+        "occurred_end": "2026-09-28T04:48:59.588665+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790570939607-0",
+        "text": "Incident ID: INC-205\nTitle: Stripe webhook retry surge test\nAffected Service: checkout-payment-svc\nSeverity: P2\nTimestamp: 2026-09-28T04:48:59.604042+00:00\nError Logs: DuplicateNotificationError: message already acknowledged\nRoot Cause: Webhook idempotent token validation missing on settlement endpoint\nResolution: Added Redis SETNX idempotency lock for 120 seconds\nResolution Succeeded: Yes\nDeployment Info: Hotfix v4.0.3\nLead Responder: Alex Chen (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-205",
+        "metadata": {
+          "incident_id": "INC-205",
+          "service": "checkout-payment-svc",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "checkout-payment-svc",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T04:48:59.607276+00:00",
+        "occurred_start": "2026-09-28T04:48:59.607276+00:00",
+        "occurred_end": "2026-09-28T04:48:59.607276+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890809-0",
+        "text": "Incident ID: INC-184\nTitle: Database connection pool exhaustion\nAffected Service: aurora-postgres-primary\nSeverity: P1\nTimestamp: 2026-09-24T09:08:00Z\nError Logs: FATAL: remaining connection slots are reserved for non-replication superuser connections (SQLSTATE 53300). Active pool count: 100/100. Connection timeout after 30000ms.\nRoot Cause: Database connection pool saturated at 50 to 100 connections. Unclosed database cursor handles in transaction retry block caused connection leakage under traffic spikes.\nResolution: Increased database connection pool from 50 to 100 via RDS Parameter Group; patched unclosed connection handle in commit 8f29d1c and deployed connection reaper.\nResolution Succeeded: Yes\nDeployment Info: Release v2.13.4\nLead Responder: Sarah Kim (DBA Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-184",
+        "metadata": {
+          "incident_id": "INC-184",
+          "service": "aurora-postgres-primary",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "aurora-postgres-primary",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.809624+00:00",
+        "occurred_start": "2026-09-28T05:21:30.809624+00:00",
+        "occurred_end": "2026-09-28T05:21:30.809624+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890826-0",
+        "text": "Incident ID: INC-178\nTitle: API 500 errors on ingress gateway\nAffected Service: api-gateway-us-east\nSeverity: P1\nTimestamp: 2026-09-21T13:50:00Z\nError Logs: 502 Bad Gateway / upstream connect error or disconnect/reset before headers. reset reason: connection failure, transport failure reason: delayed_connect_error: 111\nRoot Cause: Envoy ingress keepalive timeout was set to 60s while upstream microservices had keepalive timeout set to 60s, triggering race condition connection resets.\nResolution: Increased gateway upstream keepalive timeout from 60s to 75s and executed rolling restart of Envoy router pods.\nResolution Succeeded: Yes\nDeployment Info: Traefik to Envoy gateway migration v3.1\nLead Responder: Elena Rostova (Infra SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-178",
+        "metadata": {
+          "incident_id": "INC-178",
+          "service": "api-gateway-us-east",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "api-gateway-us-east",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.826015+00:00",
+        "occurred_start": "2026-09-28T05:21:30.826015+00:00",
+        "occurred_end": "2026-09-28T05:21:30.826015+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890837-0",
+        "text": "Incident ID: INC-172\nTitle: Redis memory exhaustion and cache eviction storm\nAffected Service: cache-redis-cluster\nSeverity: P2\nTimestamp: 2026-09-17T05:50:00Z\nError Logs: OOM command not allowed when used memory > 'maxmemory' (16GB). Key eviction rate spiked to 14,000 keys/sec; cache hit ratio dropped from 94% to 38%.\nRoot Cause: Session tokens stored without TTL expiring policy during marketing push filled 16GB RAM limit, causing eviction storm that thrashed backend DB.\nResolution: Applied volatile-lru eviction policy, bumped cluster memory to 32GB, and enforced mandatory 24h TTL on all session keys.\nResolution Succeeded: Yes\nDeployment Info: Promotional campaign launch v2.12\nLead Responder: Alex Chen (Lead SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-172",
+        "metadata": {
+          "incident_id": "INC-172",
+          "service": "cache-redis-cluster",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "cache-redis-cluster",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.837116+00:00",
+        "occurred_start": "2026-09-28T05:21:30.837116+00:00",
+        "occurred_end": "2026-09-28T05:21:30.837116+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890845-0",
+        "text": "Incident ID: INC-165\nTitle: Authentication service timeout and JWT validation failure\nAffected Service: auth-service\nSeverity: P1\nTimestamp: 2026-09-14T11:15:00Z\nError Logs: JWKSRetrievalTimeout: Failed to fetch public key set from Auth0 endpoint within 500ms timeout threshold. Signature verification aborted.\nRoot Cause: Stale JWKS public key cache eviction forced synchronous remote HTTP call on every request; outbound NAT gateway connection pool saturated.\nResolution: Increased local JWKS memory cache TTL from 5m to 24h with stale-while-revalidate background refresh worker.\nResolution Succeeded: Yes\nDeployment Info: Security patch release v1.8.9\nLead Responder: Devin Torres (SecOps Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-165",
+        "metadata": {
+          "incident_id": "INC-165",
+          "service": "auth-service",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "auth-service",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.845266+00:00",
+        "occurred_start": "2026-09-28T05:21:30.845266+00:00",
+        "occurred_end": "2026-09-28T05:21:30.845266+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890856-0",
+        "text": "Incident ID: INC-158\nTitle: Payment gateway timeout and cascade circuit breaker trip\nAffected Service: payment-service\nSeverity: P1\nTimestamp: 2026-09-10T17:40:00Z\nError Logs: CircuitBreakerOpenException: payment_gateway_stripe circuit breaker tripped. 54% failure rate in 60s sliding window.\nRoot Cause: Third-party payment gateway latency spiked to 8,000ms. In-memory worker thread pool exhausted waiting for HTTP responses without socket timeout.\nResolution: Configured strict 3,000ms HTTP socket timeout, increased Resilience4j circuit breaker open threshold to 70%, and enabled Redis dead-letter fallback queue.\nResolution Succeeded: Yes\nDeployment Info: Payment microservice v4.2.0\nLead Responder: Marcus Vance (Payments Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-158",
+        "metadata": {
+          "incident_id": "INC-158",
+          "service": "payment-service",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "payment-service",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.856138+00:00",
+        "occurred_start": "2026-09-28T05:21:30.856138+00:00",
+        "occurred_end": "2026-09-28T05:21:30.856138+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890884-0",
+        "text": "Incident ID: INC-152\nTitle: High API latency and thread pool starvation\nAffected Service: order-service\nSeverity: P2\nTimestamp: 2026-09-06T14:35:00Z\nError Logs: ThreadPoolExecutor: pool size 200 reached, active threads 200, queued tasks 1850. p99 response time jumped from 45ms to 3,800ms.\nRoot Cause: Nested synchronous gRPC call to legacy billing service without connection deadline propagation caused all worker threads to block indefinitely.\nResolution: Added 800ms gRPC deadline propagation, enabled non-blocking reactive webclient, and isolated billing lookups behind dedicated thread pool.\nResolution Succeeded: Yes\nDeployment Info: Order routing update v3.5.2\nLead Responder: Priya Patel (Core Platform)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-152",
+        "metadata": {
+          "incident_id": "INC-152",
+          "service": "order-service",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "order-service",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.884679+00:00",
+        "occurred_start": "2026-09-28T05:21:30.884679+00:00",
+        "occurred_end": "2026-09-28T05:21:30.884679+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890892-0",
+        "text": "Incident ID: INC-144\nTitle: Failed deployment database migration table lock\nAffected Service: user-service\nSeverity: P1\nTimestamp: 2026-09-02T03:10:00Z\nError Logs: ERROR: canceling statement due to lock timeout. Process 4129 waits for ExclusiveLock on relation 'users_profile_tbl'. All write queries queued.\nRoot Cause: Flyway migration script added NOT NULL column with default expression without lock timeout guard, blocking production read-write transactions.\nResolution: Aborted migration transaction, set lock_timeout = '2s', added column as NULLABLE in step 1, backfilled in batches, and added constraint as VALIDATE ONLY.\nResolution Succeeded: Yes\nDeployment Info: User Schema Migration Release v2.9.0\nLead Responder: Sarah Kim (DBA Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-144",
+        "metadata": {
+          "incident_id": "INC-144",
+          "service": "user-service",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "user-service",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.892634+00:00",
+        "occurred_start": "2026-09-28T05:21:30.892634+00:00",
+        "occurred_end": "2026-09-28T05:21:30.892634+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890913-0",
+        "text": "Incident ID: INC-137\nTitle: PostgreSQL replica replication lag and WAL backlog\nAffected Service: data-warehouse\nSeverity: P2\nTimestamp: 2026-08-28T21:40:00Z\nError Logs: Postgres WAL sender process killed: replication delay exceeded 14GB / 3600 seconds. Read replica lag spiked to 42 minutes.\nRoot Cause: Long-running analytical export query on read replica acquired catalog locks that conflicted with applied WAL streaming changes.\nResolution: Enabled max_standby_streaming_delay = 30s, enabled hot_standby_feedback = on, and isolated heavy analytical queries to dedicated ETL replica.\nResolution Succeeded: Yes\nDeployment Info: Nightly batch analytical exporter v1.2\nLead Responder: Alex Chen (Lead SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-137",
+        "metadata": {
+          "incident_id": "INC-137",
+          "service": "data-warehouse",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "data-warehouse",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.913608+00:00",
+        "occurred_start": "2026-09-28T05:21:30.913608+00:00",
+        "occurred_end": "2026-09-28T05:21:30.913608+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890945-0",
+        "text": "Incident ID: INC-129\nTitle: Notification service SSE connection memory leak\nAffected Service: notification-service\nSeverity: P2\nTimestamp: 2026-08-24T15:20:00Z\nError Logs: FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory. RSS memory grew from 250MB to 1.8GB.\nRoot Cause: Server-Sent Events connection cleanup handler failed to unbind client event listeners on unexpected TCP close, leaking connection buffers in memory.\nResolution: Rewrote SSE disconnect lifecycle handler with explicit listener removal, added heartbeat ping-pong, and capped max heap to 2GB with container auto-recycle.\nResolution Succeeded: Yes\nDeployment Info: Realtime notification update v2.4.1\nLead Responder: Elena Rostova (Infra SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-129",
+        "metadata": {
+          "incident_id": "INC-129",
+          "service": "notification-service",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "notification-service",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.945178+00:00",
+        "occurred_start": "2026-09-28T05:21:30.945178+00:00",
+        "occurred_end": "2026-09-28T05:21:30.945178+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890955-0",
+        "text": "Incident ID: INC-121\nTitle: Async worker crash loop from unhandled SIGTERM signal\nAffected Service: async-worker\nSeverity: P2\nTimestamp: 2026-08-20T08:00:00Z\nError Logs: K8s Pod OOMKilled/CrashLoopBackOff: exit code 137. 24 unacknowledged messages re-queued onto RabbitMQ dead-letter exchange concurrently.\nRoot Cause: Kubernetes node preemption sent SIGTERM to Celery workers; shutdown handler did not wait for in-flight jobs to complete before terminating database session.\nResolution: Configured terminationGracePeriodSeconds to 60s in Pod spec and added graceful SIGTERM drain handler with Celery warm shutdown.\nResolution Succeeded: Yes\nDeployment Info: Node autoscaler upgrade v1.28\nLead Responder: Alex Chen (Lead SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-121",
+        "metadata": {
+          "incident_id": "INC-121",
+          "service": "async-worker",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "async-worker",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.955565+00:00",
+        "occurred_start": "2026-09-28T05:21:30.955565+00:00",
+        "occurred_end": "2026-09-28T05:21:30.955565+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890966-0",
+        "text": "Incident ID: INC-115\nTitle: PostgreSQL deadlock during batch invoice generation\nAffected Service: billing-db\nSeverity: P1\nTimestamp: 2026-08-16T09:45:00Z\nError Logs: ERROR: deadlock detected. Process 14892 waits for ShareLock on transaction 8921827; Process 14893 waits for ExclusiveLock on tuple (48, 12).\nRoot Cause: Concurrent billing cron jobs acquired row locks on customer invoices in reverse primary key order, triggering deterministic database deadlocks.\nResolution: Sorted customer invoice IDs prior to acquiring SELECT FOR UPDATE row locks, eliminating lock inversion order.\nResolution Succeeded: Yes\nDeployment Info: Monthly subscription billing cycle v2.10\nLead Responder: Sarah Kim (DBA Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-115",
+        "metadata": {
+          "incident_id": "INC-115",
+          "service": "billing-db",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "billing-db",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.966205+00:00",
+        "occurred_start": "2026-09-28T05:21:30.966205+00:00",
+        "occurred_end": "2026-09-28T05:21:30.966205+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890975-0",
+        "text": "Incident ID: INC-110\nTitle: High CPU throttling on Checkout microservice\nAffected Service: checkout-service\nSeverity: P2\nTimestamp: 2026-08-12T13:05:00Z\nError Logs: cgroup CPU throttling exceeded 84% on checkout-worker pods. p99 response time spiked from 25ms to 2,400ms.\nRoot Cause: Regex catastrophic backtracking in promo code validation routine caused exponential CPU evaluation on strings with repeated hyphens.\nResolution: Rewrote promo code regex validator using linear RE2 engine without backtracking and increased Kubernetes CPU limits from 1.0 to 2.5 cores.\nResolution Succeeded: Yes\nDeployment Info: Summer promotion release v3.4.1\nLead Responder: Priya Patel (Core Platform)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-110",
+        "metadata": {
+          "incident_id": "INC-110",
+          "service": "checkout-service",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "checkout-service",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.975459+00:00",
+        "occurred_start": "2026-09-28T05:21:30.975459+00:00",
+        "occurred_end": "2026-09-28T05:21:30.975459+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890985-0",
+        "text": "Incident ID: INC-105\nTitle: Kafka consumer group rebalance storm\nAffected Service: event-streaming-kafka\nSeverity: P1\nTimestamp: 2026-08-08T18:50:00Z\nError Logs: CommitFailedException: Offset commit cannot be completed since the group has already rebalanced. max.poll.interval.ms exceeded.\nRoot Cause: Heavy image processing task inside Kafka message handler exceeded 300,000ms poll interval, causing coordinator to evict consumer and trigger perpetual rebalance.\nResolution: Decoupled image processing onto asynchronous worker thread pool and increased max.poll.interval.ms from 5m to 15m.\nResolution Succeeded: Yes\nDeployment Info: Media pipeline upgrade v1.9.0\nLead Responder: Elena Rostova (Infra SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-105",
+        "metadata": {
+          "incident_id": "INC-105",
+          "service": "event-streaming-kafka",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "event-streaming-kafka",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.985755+00:00",
+        "occurred_start": "2026-09-28T05:21:30.985755+00:00",
+        "occurred_end": "2026-09-28T05:21:30.985755+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572890994-0",
+        "text": "Incident ID: INC-098\nTitle: Elasticsearch cluster yellow status and JVM memory pressure\nAffected Service: search-cluster\nSeverity: P2\nTimestamp: 2026-08-04T11:25:00Z\nError Logs: CircuitBreakingException: [parent] Data too large, data for [<transport_request>] would be [31849182740/29.6gb], which is larger than the limit of [30601641984/28.5gb].\nRoot Cause: Unbounded wildcard terms aggregation over catalog search logs filled JVM fielddata cache, tripping the circuit breaker and stalling index queries.\nResolution: Cleared fielddata cache, disabled wildcard aggregations on non-keyword fields, and added indices.fielddata.cache.size: 20% limit.\nResolution Succeeded: Yes\nDeployment Info: Search telemetry expansion v2.6\nLead Responder: Marcus Vance (Search Team)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-098",
+        "metadata": {
+          "incident_id": "INC-098",
+          "service": "search-cluster",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "search-cluster",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:30.994938+00:00",
+        "occurred_start": "2026-09-28T05:21:30.994938+00:00",
+        "occurred_end": "2026-09-28T05:21:30.994938+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572891004-0",
+        "text": "Incident ID: INC-092\nTitle: Core DNS resolution timeout on AWS NAT Gateway\nAffected Service: core-network\nSeverity: P1\nTimestamp: 2026-07-31T06:45:00Z\nError Logs: dial tcp: lookup api.stripe.com on 10.0.0.2:53: i/o timeout. 5-second DNS resolution latency spikes on outbound HTTPS calls.\nRoot Cause: Node-local CoreDNS daemonset crashed on 3 worker nodes due to conntrack table exhaustion on Linux kernel netfilter.\nResolution: Increased nf_conntrack_max from 262144 to 1048576 via sysctl and deployed NodeLocal DNSCache daemon to bypass conntrack for internal lookups.\nResolution Succeeded: Yes\nDeployment Info: Kubernetes 1.28 cluster patch\nLead Responder: Elena Rostova (Infra SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-092",
+        "metadata": {
+          "incident_id": "INC-092",
+          "service": "core-network",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "core-network",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:31.004391+00:00",
+        "occurred_start": "2026-09-28T05:21:31.004391+00:00",
+        "occurred_end": "2026-09-28T05:21:31.004391+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572891025-0",
+        "text": "Incident ID: INC-087\nTitle: S3 multipart upload file descriptor leak\nAffected Service: asset-storage-svc\nSeverity: P2\nTimestamp: 2026-07-27T16:55:00Z\nError Logs: EMFILE: too many open files. Process exceeded ulimit of 1024 open file descriptors. New incoming upload requests refused with 500.\nRoot Cause: Temporary upload staging chunks were opened with fs.createReadStream without listening to error event, leaving file descriptors open on client abort.\nResolution: Used stream.pipeline() with auto-close semantics, raised container nofile ulimit to 65535, and scheduled automated orphaned chunk cleanup cron.\nResolution Succeeded: Yes\nDeployment Info: Asset upload service v1.6.3\nLead Responder: Devin Torres (SecOps Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-087",
+        "metadata": {
+          "incident_id": "INC-087",
+          "service": "asset-storage-svc",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "asset-storage-svc",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:31.025850+00:00",
+        "occurred_start": "2026-09-28T05:21:31.025850+00:00",
+        "occurred_end": "2026-09-28T05:21:31.025850+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572891043-0",
+        "text": "Incident ID: INC-081\nTitle: Ingress edge SSL intermediate certificate expiration\nAffected Service: k8s-ingress-edge\nSeverity: P1\nTimestamp: 2026-07-23T03:50:00Z\nError Logs: SEC_ERROR_UNKNOWN_ISSUER / Peer's Certificate issuer is not recognized. Edge SSL handshake dropped for 100% of non-cached mobile clients.\nRoot Cause: cert-manager secret renewed leaf certificate but omitted full intermediate CA chain bundle in TLS Kubernetes secret.\nResolution: Re-issued certificate using cert-manager with fullchain.pem including Sectigo intermediate bundle, and restarted edge Traefik pods.\nResolution Succeeded: Yes\nDeployment Info: Automated certificate rotation cycle\nLead Responder: Alex Chen (Lead SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-081",
+        "metadata": {
+          "incident_id": "INC-081",
+          "service": "k8s-ingress-edge",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "k8s-ingress-edge",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:31.043951+00:00",
+        "occurred_start": "2026-09-28T05:21:31.043951+00:00",
+        "occurred_end": "2026-09-28T05:21:31.043951+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572891053-0",
+        "text": "Incident ID: INC-076\nTitle: Rate limiting token bucket Redis desync\nAffected Service: rate-limiter-service\nSeverity: P2\nTimestamp: 2026-07-19T21:10:00Z\nError Logs: HTTP 429 Too Many Requests returned for valid internal API consumers. Token bucket counter evaluated negative balance.\nRoot Cause: Non-atomic GET then SET operations in rate limiter allowed concurrent worker race condition to overwrite bucket timestamp with future clock drift.\nResolution: Migrated rate-limiting logic to atomic Redis Lua script executing token replenishment and deduction in a single transaction.\nResolution Succeeded: Yes\nDeployment Info: API security hardening v2.3.0\nLead Responder: Priya Patel (Core Platform)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-076",
+        "metadata": {
+          "incident_id": "INC-076",
+          "service": "rate-limiter-service",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "rate-limiter-service",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:31.053937+00:00",
+        "occurred_start": "2026-09-28T05:21:31.053937+00:00",
+        "occurred_end": "2026-09-28T05:21:31.053937+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572891093-0",
+        "text": "Incident ID: INC-071\nTitle: Node.js WebSocket gateway memory leak during reconnect storms\nAffected Service: realtime-gateway\nSeverity: P1\nTimestamp: 2026-07-15T14:15:00Z\nError Logs: FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory. 14 gateway pods restarted simultaneously.\nRoot Cause: Client reconnect storm queued offline messages in an unbounded array per socket without backpressure limits.\nResolution: Implemented bounded circular ring buffer (max 100 queued messages per client) and applied exponential reconnect jitter on frontend SDK.\nResolution Succeeded: Yes\nDeployment Info: Realtime chat release v3.0.1\nLead Responder: Elena Rostova (Infra SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-071",
+        "metadata": {
+          "incident_id": "INC-071",
+          "service": "realtime-gateway",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "realtime-gateway",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:31.093268+00:00",
+        "occurred_start": "2026-09-28T05:21:31.093268+00:00",
+        "occurred_end": "2026-09-28T05:21:31.093268+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572891103-0",
+        "text": "Incident ID: INC-065\nTitle: Failed canary deployment route saturation\nAffected Service: inventory-service\nSeverity: P2\nTimestamp: 2026-07-11T10:00:00Z\nError Logs: Argo Rollouts canary weight 10% overwhelmed single canary replica pod. CPU 100%, 503 Service Unavailable for 12% of traffic.\nRoot Cause: Canary step configuration increased traffic weight before horizontal pod autoscaler (HPA) had scaled minimum replicas from 1 to 4.\nResolution: Added minimum replica constraint (minReplicas: 4) before canary traffic shift and configured automated rollback on 5xx error rate > 2%.\nResolution Succeeded: Yes\nDeployment Info: Canary Rollout v2.1.0\nLead Responder: Alex Chen (Lead SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-065",
+        "metadata": {
+          "incident_id": "INC-065",
+          "service": "inventory-service",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "inventory-service",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:31.103439+00:00",
+        "occurred_start": "2026-09-28T05:21:31.103439+00:00",
+        "occurred_end": "2026-09-28T05:21:31.103439+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572891115-0",
+        "text": "Incident ID: INC-058\nTitle: Unindexed foreign key constraint query spillover\nAffected Service: reporting-db\nSeverity: P2\nTimestamp: 2026-07-07T15:45:00Z\nError Logs: Seq Scan on order_items (cost=0.00..1849182.20 rows=48210920). Query execution time: 142 seconds, saturating IOPS limit on EBS gp3 volume.\nRoot Cause: Deletion cascade on parent orders table triggered full sequential table scan on 48M row child table lacking index on order_id column.\nResolution: Created concurrent index CREATE INDEX CONCURRENTLY idx_order_items_order_id ON order_items(order_id); query time dropped to 2ms.\nResolution Succeeded: Yes\nDeployment Info: Reporting DB cleanup job\nLead Responder: Sarah Kim (DBA Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-058",
+        "metadata": {
+          "incident_id": "INC-058",
+          "service": "reporting-db",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "reporting-db",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:31.115919+00:00",
+        "occurred_start": "2026-09-28T05:21:31.115919+00:00",
+        "occurred_end": "2026-09-28T05:21:31.115919+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790572891130-0",
+        "text": "Incident ID: INC-052\nTitle: gRPC deadline propagation cascade failure\nAffected Service: recommendation-engine\nSeverity: P1\nTimestamp: 2026-07-03T10:30:00Z\nError Logs: rpc error: code = DeadlineExceeded desc = context deadline exceeded. 100% cascade timeout across all upstream recommendation widgets.\nRoot Cause: Upstream service had 1000ms timeout while downstream vector search had 1200ms timeout. Upstream cancelled request while downstream kept computing wasted vector queries.\nResolution: Propagated gRPC context deadline throughout all RPC child contexts, enabling immediate cooperative cancellation when caller aborts.\nResolution Succeeded: Yes\nDeployment Info: Recommendation v1.4.0\nLead Responder: Marcus Vance (Payments Lead)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-052",
+        "metadata": {
+          "incident_id": "INC-052",
+          "service": "recommendation-engine",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "recommendation-engine",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:21:31.130562+00:00",
+        "occurred_start": "2026-09-28T05:21:31.130562+00:00",
+        "occurred_end": "2026-09-28T05:21:31.130562+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790574059046-0",
+        "text": "Incident ID: INC-204\nTitle: Production API 500 Errors\nAffected Service: api-gateway-us-east\nSeverity: P1\nTimestamp: 2026-09-28T09:15:00Z\nError Logs: Database connection pool exhausted. Connection timeout on aurora-postgres-primary after 30000ms. HTTP 500 responses increasing. 502 Bad Gateway upstream socket connect error.\nRoot Cause: Upstream database connection pool saturation causing gateway worker threads to stall waiting on connections and trigger HTTP 500 cascade.\nResolution: Remediated operational degradation on service 'api-gateway-us-east'. Root cause addressed and verified stable in production.\nResolution Succeeded: Yes\nDeployment Info: Standard release pipeline\nLead Responder: Sarah K. (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-204",
+        "metadata": {
+          "incident_id": "INC-204",
+          "service": "api-gateway-us-east",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "api-gateway-us-east",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:40:59.046608+00:00",
+        "occurred_start": "2026-09-28T05:40:59.046608+00:00",
+        "occurred_end": "2026-09-28T05:40:59.046608+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790574819139-0",
+        "text": "Incident ID: INC-201\nTitle: Authentication Service Latency\nAffected Service: auth0-session-broker\nSeverity: P3\nTimestamp: 2026-09-28T07:46:00Z\nError Logs: JWKSRetrievalTimeout: Failed to fetch public key set from auth0 endpoint within 500ms timeout.\nRoot Cause: Stale JWKS public key cache eviction causing blocking remote fetches.\nResolution: Remediated operational degradation on service 'auth0-session-broker'. Root cause addressed and verified stable in production.\nResolution Succeeded: Yes\nDeployment Info: Standard release pipeline\nLead Responder: Devin T. (Security Core)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-201",
+        "metadata": {
+          "incident_id": "INC-201",
+          "service": "auth0-session-broker",
+          "severity": "P3",
+          "worked": "True"
+        },
+        "tags": [
+          "auth0-session-broker",
+          "P3",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:53:39.139083+00:00",
+        "occurred_start": "2026-09-28T05:53:39.139083+00:00",
+        "occurred_end": "2026-09-28T05:53:39.139083+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790575125700-0",
+        "text": "Incident ID: INC-206\nTitle: Database Connection Pool Exhaustion\nAffected Service: aurora-postgres\nSeverity: P1\nTimestamp: 2026-09-28T05:58:43.360375+00:00\nError Logs: Connection pool exhausted. PostgreSQL connection timeout. HTTP 500 errors increasing.\nRoot Cause: PostgreSQL connection pool exhausted by unreleased connections\nResolution: Increase connection pool and clean idle connections.\nResolution Succeeded: Yes\nDeployment Info: Standard release pipeline\nLead Responder: Alex Chen (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-206",
+        "metadata": {
+          "incident_id": "INC-206",
+          "service": "aurora-postgres",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "aurora-postgres",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T05:58:45.700405+00:00",
+        "occurred_start": "2026-09-28T05:58:45.700405+00:00",
+        "occurred_end": "2026-09-28T05:58:45.700405+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790575233393-0",
+        "text": "Incident ID: INC-206\nTitle: Database Connection Pool Exhaustion\nAffected Service: aurora-postgres\nSeverity: P1\nTimestamp: 2026-09-28T06:00:31.048796+00:00\nError Logs: Connection pool exhausted. PostgreSQL connection timeout. HTTP 500 errors increasing.\nRoot Cause: PostgreSQL connection pool exhausted by unreleased connections\nResolution: Increase connection pool and clean idle connections.\nResolution Succeeded: Yes\nDeployment Info: Standard release pipeline\nLead Responder: Alex Chen (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-206",
+        "metadata": {
+          "incident_id": "INC-206",
+          "service": "aurora-postgres",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "aurora-postgres",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T06:00:33.393025+00:00",
+        "occurred_start": "2026-09-28T06:00:33.393025+00:00",
+        "occurred_end": "2026-09-28T06:00:33.393025+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790576814241-0",
+        "text": "Incident ID: INC-209\nTitle: Redis Cache Connection Failure\nAffected Service: cache-redis-cluster\nSeverity: P1\nTimestamp: 2026-09-28T06:26:48.318487+00:00\nError Logs: Multiple services reporting inability to connect to Redis cache. Cache miss rates at 100%. ERR Connection refused 127.0.0.1:6379\nRoot Cause: Redis connection pool exhausted due to missing timeout config.\nResolution: Restarted Redis, configured maxmemory-policy, added health check endpoint.\nResolution Succeeded: Yes\nDeployment Info: Standard release pipeline\nLead Responder: Demo SRE\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-209",
+        "metadata": {
+          "incident_id": "INC-209",
+          "service": "cache-redis-cluster",
+          "severity": "P1",
+          "worked": "True"
+        },
+        "tags": [
+          "cache-redis-cluster",
+          "P1",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T06:26:54.241139+00:00",
+        "occurred_start": "2026-09-28T06:26:54.241139+00:00",
+        "occurred_end": "2026-09-28T06:26:54.241139+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790576942045-0",
+        "text": "Incident ID: INC-211\nTitle: Redis OOM Eviction Spike\nAffected Service: cache-redis-cluster\nSeverity: P2\nTimestamp: 2026-09-28T06:28:56.123827+00:00\nError Logs: Cache eviction storm. Redis OOM. Connection refused on 6379.\nRoot Cause: Redis maxmemory too low for weekend traffic\nResolution: Increased maxmemory to 32GB and switched to volatile-lru policy\nResolution Succeeded: Yes\nDeployment Info: Standard release pipeline\nLead Responder: Alex Chen (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-211",
+        "metadata": {
+          "incident_id": "INC-211",
+          "service": "cache-redis-cluster",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "cache-redis-cluster",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T06:29:02.045578+00:00",
+        "occurred_start": "2026-09-28T06:29:02.045578+00:00",
+        "occurred_end": "2026-09-28T06:29:02.045578+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790610484817-0",
+        "text": "Incident ID: INC-TEST-99\nTitle: Kafka consumer offset commit timeout test\nAffected Service: kafka-event-stream\nSeverity: P2\nTimestamp: 2026-09-28T15:48:04.508223+00:00\nError Logs: CommitFailedException: The request timed out while waiting for group coordinator\nRoot Cause: Heartbeat interval exceeded max.poll.interval.ms under large message batches\nResolution: Increased max.poll.interval.ms from 300s to 600s and reduced max.poll.records to 250\nResolution Succeeded: Yes\nDeployment Info: Kafka consumer v2.1.0\nLead Responder: Alex Chen\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-test-99",
+        "metadata": {
+          "incident_id": "INC-TEST-99",
+          "service": "kafka-event-stream",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "kafka-event-stream",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T15:48:04.817441+00:00",
+        "occurred_start": "2026-09-28T15:48:04.817441+00:00",
+        "occurred_end": "2026-09-28T15:48:04.817441+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      },
+      {
+        "id": "mem-1790610484848-0",
+        "text": "Incident ID: INC-205\nTitle: Stripe webhook retry surge test\nAffected Service: checkout-payment-svc\nSeverity: P2\nTimestamp: 2026-09-28T15:48:04.843574+00:00\nError Logs: DuplicateNotificationError: message already acknowledged\nRoot Cause: Webhook idempotent token validation missing on settlement endpoint\nResolution: Added Redis SETNX idempotency lock for 120 seconds\nResolution Succeeded: Yes\nDeployment Info: Hotfix v4.0.3\nLead Responder: Alex Chen (On-Call SRE)\n",
+        "type": "experience",
+        "context": "production incident post-mortem",
+        "document_id": "incident-inc-205",
+        "metadata": {
+          "incident_id": "INC-205",
+          "service": "checkout-payment-svc",
+          "severity": "P2",
+          "worked": "True"
+        },
+        "tags": [
+          "checkout-payment-svc",
+          "P2",
+          "worked",
+          "production-postmortem"
+        ],
+        "entities": null,
+        "mentioned_at": "2026-09-28T15:48:04.848500+00:00",
+        "occurred_start": "2026-09-28T15:48:04.848500+00:00",
+        "occurred_end": "2026-09-28T15:48:04.848500+00:00",
+        "scores": {
+          "final": 1.0,
+          "semantic": 1.0,
+          "keyword": 1.0
+        }
+      }
+    ]
+  }
+}

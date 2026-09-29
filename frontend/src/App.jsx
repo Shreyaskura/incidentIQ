@@ -11,6 +11,7 @@ import IncidentsView from './components/IncidentsView';
 import ServicesView from './components/ServicesView';
 import AnalyticsView from './components/AnalyticsView';
 import SettingsView from './components/SettingsView';
+import SplashScreen from './components/SplashScreen';
 import {
   fetchHealth,
   fetchIncidents,
@@ -42,6 +43,8 @@ export default function App() {
   const [isAnalyzing, setIsAnalyzing]   = useState(false);
   const [apiError, setApiError]         = useState(null);
   const [memoryCount, setMemoryCount]   = useState(0);
+  const [showSplash, setShowSplash]     = useState(true);
+  const [splashFading, setSplashFading] = useState(false);
 
   const showToast = (msg) => {
     setToastMessage(msg);
@@ -79,7 +82,23 @@ export default function App() {
     }
   };
 
-  useEffect(() => { loadIncidentsData(); }, []);
+  useEffect(() => {
+    loadIncidentsData();
+
+    // Initial splash screen timer: 2 seconds active, then smooth fade-out
+    const fadeTimer = setTimeout(() => {
+      setSplashFading(true);
+    }, 2000);
+
+    const removeTimer = setTimeout(() => {
+      setShowSplash(false);
+    }, 2550);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
 
   const handleSelectIncident = async (incidentId) => {
     try {
@@ -180,6 +199,9 @@ export default function App() {
 
   return (
     <div className="app-shell">
+      {/* Initial Animated Splash / Loading Screen */}
+      {showSplash && <SplashScreen isFading={splashFading} />}
+
       <Sidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}

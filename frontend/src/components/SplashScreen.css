@@ -1,0 +1,358 @@
+/* ==========================================================================
+   IncidentIQ — Professional Animated Splash / Loading Screen
+   Developer / DevOps SRE Dark Aesthetic
+   ========================================================================== */
+
+.splash-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background-color: #080c14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              visibility 0.55s;
+}
+
+.splash-overlay.fade-out {
+  opacity: 0;
+  transform: scale(1.02) translateY(-6px);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* Background Atmosphere & Grid */
+.splash-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 32px 32px, 96px 96px, 96px 96px;
+  pointer-events: none;
+}
+
+/* Ambient Radial Glows */
+.splash-ambient-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 77, 46, 0.16) 0%, rgba(99, 102, 241, 0.08) 45%, transparent 70%);
+  filter: blur(48px);
+  pointer-events: none;
+  animation: splash-pulse-glow 3s ease-in-out infinite alternate;
+}
+
+.splash-ambient-secondary {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 65%);
+  filter: blur(55px);
+  pointer-events: none;
+  transform: translate(60px, -40px);
+}
+
+/* Central Content Container */
+.splash-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 480px;
+  animation: splash-entrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Animated Emblem & Rings */
+.splash-emblem-wrap {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* Outer Orbiting / Rotating Radar Ring */
+.splash-ring-outer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.splash-ring-scanner {
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  border-top-color: #e54d2e;
+  border-right-color: rgba(229, 77, 46, 0.35);
+  animation: splash-spin 2s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(229, 77, 46, 0.6));
+}
+
+.splash-ring-inner {
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  animation: splash-spin-reverse 6s linear infinite;
+}
+
+/* Core Logo Mark */
+.splash-logo-core {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #e54d2e 0%, #b83318 100%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 4px 20px rgba(229, 77, 46, 0.4),
+    0 0 30px rgba(229, 77, 46, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  position: relative;
+  z-index: 2;
+  animation: splash-icon-pulse 2s ease-in-out infinite alternate;
+}
+
+.splash-logo-core svg {
+  color: #ffffff;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+/* Title & Subtitle */
+.splash-title-group {
+  margin-bottom: 28px;
+}
+
+.splash-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.splash-title .accent-iq {
+  background: linear-gradient(135deg, #ff6b4a 0%, #e54d2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px rgba(229, 77, 46, 0.35);
+}
+
+.splash-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* Progress / Loading Indicator Section */
+.splash-loader-wrap {
+  width: 260px;
+  max-width: 85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.splash-progress-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.splash-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #e54d2e 0%, #ff7849 50%, #3b82f6 100%);
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(229, 77, 46, 0.7);
+  animation: splash-progress 2s cubic-bezier(0.35, 0.05, 0.25, 1) forwards;
+}
+
+/* Status message */
+.splash-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: 11.5px;
+  color: #94a3b8;
+  letter-spacing: 0.02em;
+}
+
+.splash-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: splash-dot-pulse 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* Bottom Telemetry Metadata */
+.splash-footer-meta {
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: #475569;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.splash-meta-sep {
+  opacity: 0.4;
+}
+
+/* ==========================================================================
+   CSS Keyframe Animations
+   ========================================================================== */
+
+@keyframes splash-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes splash-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes splash-spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes splash-icon-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 20px rgba(229, 77, 46, 0.35);
+  }
+  100% {
+    transform: scale(1.04);
+    box-shadow: 0 4px 28px rgba(229, 77, 46, 0.6), 0 0 35px rgba(229, 77, 46, 0.25);
+  }
+}
+
+@keyframes splash-pulse-glow {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes splash-progress {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 38%;
+  }
+  65% {
+    width: 76%;
+  }
+  90% {
+    width: 93%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes splash-dot-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .splash-emblem-wrap {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 20px;
+  }
+  .splash-logo-core {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+  }
+  .splash-title {
+    font-size: 26px;
+  }
+  .splash-subtitle {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+  .splash-loader-wrap {
+    width: 220px;
+  }
+  .splash-footer-meta {
+    font-size: 9.5px;
+    bottom: 18px;
+    gap: 10px;
+  }
+}
